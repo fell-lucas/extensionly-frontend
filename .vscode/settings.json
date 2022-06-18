@@ -1,0 +1,8 @@
+{
+  "i18n-ally.sourceLanguage": "pt-BR",
+  "i18n-ally.displayLanguage": "pt-BR",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": "public/locales",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.regex.usageMatchAppend": ["[^\\w\\d]c\\(['\"`]({key})['\"`]"]
+}
