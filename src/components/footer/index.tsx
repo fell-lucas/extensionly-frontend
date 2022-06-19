@@ -57,8 +57,8 @@ const Footer = () => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('language')}</ListHeader>
-            <Link onClick={() => toggleLocale('pt-BR')}>{t('portuguese')}</Link>
-            <Link onClick={() => toggleLocale('en')}>{t('english')}</Link>
+            <Link onClick={() => toggleLocale('pt-BR')}>Português</Link>
+            <Link onClick={() => toggleLocale('en')}>English</Link>
           </Stack>
         </SimpleGrid>
       </Container>
