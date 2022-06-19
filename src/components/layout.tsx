@@ -1,25 +1,14 @@
 import { FC, ReactNode } from 'react';
 import Navbar from './navbar';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import Head from 'next/head';
 import Footer from './footer';
 import Script from 'next/script';
-import { extendTheme } from '@chakra-ui/react';
-import { withProse } from '@nikolovlazar/chakra-ui-prose';
+import { ThemeProvider } from './theme';
 
-export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
-  const theme = extendTheme(
-    {
-      fonts: {
-        heading: `'Montserrat', sans-serif`,
-        body: `'Montserrat', sans-serif`,
-      },
-    },
-    withProse()
-  );
-
+export const Layout: FC<{ children: ReactNode; cookies: string }> = ({ cookies, children }) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ThemeProvider>
       <Script
         defer
         data-domain='extensionly.vercel.app'
@@ -30,8 +19,10 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
         <meta name='description' content='Extensionly app' />
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <Container as='main' py={12} maxW='container.xl' centerContent>
+        {children}
+      </Container>
       <Footer />
-    </ChakraProvider>
+    </ThemeProvider>
   );
 };
