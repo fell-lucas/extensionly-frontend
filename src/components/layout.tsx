@@ -9,6 +9,7 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => (
     <Head>
       <title>Extensionly</title>
       <meta name='description' content='Extensionly app' />
+      <script defer data-domain='extensionly.vercel.app' src='http://161.35.123.65/js/plausible.js'></script>
     </Head>
     <Navbar />
     <main>{children}</main>
