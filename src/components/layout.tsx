@@ -6,7 +6,7 @@ import Footer from './footer';
 import Script from 'next/script';
 import { ThemeProvider } from './theme';
 
-export const Layout: FC<{ children: ReactNode; cookies: string }> = ({ cookies, children }) => {
+export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <ThemeProvider>
       <Script
