@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { Container, Link, SimpleGrid, Stack, Text, Flex, Tag, useColorModeValue } from '@chakra-ui/react';
+import { Container, Link, SimpleGrid, Stack, Text, Flex, Tag } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
@@ -19,7 +19,7 @@ const Footer = () => {
   const router = useRouter();
 
   const toggleLocale = (locale: 'pt-BR' | 'en') => {
-    router.push(router.asPath, undefined, { locale });
+    router.push(router.asPath, undefined, { locale, scroll: false });
   };
 
   return (
@@ -31,16 +31,22 @@ const Footer = () => {
             <Link href={'#'}>{t('overview')}</Link>
             <Stack direction={'row'} align={'center'} spacing={2}>
               <Link href={'#'}>{t('features')}</Link>
-              <Tag size={'sm'} bg={useColorModeValue('green.300', 'green.800')} ml={2} color={'white'}>
+              <Tag size={'sm'} bg={'brandGreen'} ml={2} color={'white'}>
                 {c('new')}
               </Tag>
             </Stack>
             <Link href={'#'}>{t('tutorials')}</Link>
+            <Link isExternal href={'https://extensionly-analytics.fell.codes/extensionly.vercel.app'}>
+              {t('publicAnalytics')} <ExternalLinkIcon mx='2px' />
+            </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
-            <Link as={NextLink} href={'/about'}>
-              {t('aboutUs')}
+            <NextLink href={'/about'}>
+              <Link>{c('aboutUs')}</Link>
+            </NextLink>
+            <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
+              {t('openSource')} <ExternalLinkIcon mx='2px' />
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
@@ -67,11 +73,11 @@ const Footer = () => {
         _before={{
           content: '""',
           borderBottom: '1px solid',
-          borderColor: useColorModeValue('gray.200', 'gray.700'),
+          borderColor: 'brandGrayBorder',
           flexGrow: 1,
         }}
       ></Flex>
-      <Text pt={6} fontSize={'sm'} textAlign={'center'}>
+      <Text py={6} fontSize={'sm'} textAlign={'center'}>
         {t('reserved')}
       </Text>
     </>

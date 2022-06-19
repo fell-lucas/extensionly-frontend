@@ -1,15 +1,16 @@
 {
-  "aboutUs": "About Us",
   "company": "Company",
   "cookiesPolicy": "Cookies Policy",
   "features": "Features",
   "followUs": "Follow Us",
   "language": "Language",
   "legal": "Legal",
+  "openSource": "Open source",
   "overview": "Overview",
   "privacyPolicy": "Privacy Policy",
   "product": "Product",
-  "reserved": "© 2022-PRESENT DalepFell. \nAll rights reserved",
+  "publicAnalytics": "Public Analytics",
+  "reserved": "© 2022-PRESENT The Extensionly contributors. All rights reserved",
   "serviceTerms": "Terms of Use",
   "tutorials": "Tutorials"
 }

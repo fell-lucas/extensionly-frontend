@@ -1,22 +1,28 @@
-import { FC, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 import Navbar from './navbar';
-import { ChakraProvider } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import Head from 'next/head';
 import Footer from './footer';
+import Script from 'next/script';
+import { ThemeProvider } from './theme';
 
-export const Layout: FC<{ children: ReactNode }> = ({ children }) => (
-  <ChakraProvider>
-    <Head>
-      <title>Extensionly</title>
-      <meta name='description' content='Extensionly app' />
-      <script
+export const Layout = ({ children }: PropsWithChildren<unknown>) => {
+  return (
+    <ThemeProvider>
+      <Script
         defer
         data-domain='extensionly.vercel.app'
         src='https://extensionly-analytics.fell.codes/js/plausible.js'
-      ></script>
-    </Head>
-    <Navbar />
-    <main>{children}</main>
-    <Footer />
-  </ChakraProvider>
-);
+      ></Script>
+      <Head>
+        <title>Extensionly</title>
+        <meta name='description' content='Extensionly app' />
+      </Head>
+      <Navbar />
+      <Container as='main' py={3} maxW='container.xl' centerContent>
+        {children}
+      </Container>
+      <Footer />
+    </ThemeProvider>
+  );
+};
