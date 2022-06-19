@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { Layout } from '../components/layout';
 import { appWithTranslation } from 'next-i18next';
 import NextNProgress from 'nextjs-progressbar';
+import '../styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Layout>
