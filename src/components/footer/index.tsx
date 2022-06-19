@@ -19,7 +19,7 @@ const Footer = () => {
   const router = useRouter();
 
   const toggleLocale = (locale: 'pt-BR' | 'en') => {
-    router.push(router.asPath, undefined, { locale });
+    router.push(router.asPath, undefined, { locale, scroll: false });
   };
 
   return (
@@ -42,9 +42,9 @@ const Footer = () => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
-            <Link as={NextLink} href={'/about'}>
-              {c('aboutUs')}
-            </Link>
+            <NextLink href={'/about'}>
+              <Link>{c('aboutUs')}</Link>
+            </NextLink>
             <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
               {t('openSource')} <ExternalLinkIcon mx='2px' />
             </Link>

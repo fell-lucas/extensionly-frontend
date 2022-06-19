@@ -19,7 +19,7 @@ export const Layout = ({ children }: PropsWithChildren<unknown>) => {
         <meta name='description' content='Extensionly app' />
       </Head>
       <Navbar />
-      <Container as='main' py={12} maxW='container.xl' centerContent>
+      <Container as='main' py={3} maxW='container.xl' centerContent>
         {children}
       </Container>
       <Footer />

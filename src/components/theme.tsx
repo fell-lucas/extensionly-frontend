@@ -13,6 +13,10 @@ export const ThemeProvider = ({ children }: PropsWithChildren<unknown>) => {
       },
       semanticTokens: {
         colors: {
+          brandHighlightBg: {
+            default: 'white',
+            _dark: 'gray.900',
+          },
           brandGrayBorder: {
             default: 'gray.200',
             _dark: 'gray.700',
@@ -20,6 +24,10 @@ export const ThemeProvider = ({ children }: PropsWithChildren<unknown>) => {
           brandGreen: {
             default: 'green.300',
             _dark: 'green.800',
+          },
+          text: {
+            default: 'gray.600',
+            _dark: 'gray.300',
           },
         },
       },
