@@ -1,0 +1,17 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--chakra-colors-teal-300) var(--chakra-colors-chakra-body-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--chakra-colors-chakra-body-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--chakra-colors-teal-300);
+  border-radius: 5px;
+}
