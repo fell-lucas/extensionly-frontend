@@ -18,7 +18,6 @@ specifiers:
   jotai: ^1.7.2
   next: 12.1.6
   next-i18next: ^11.0.0
-  next-themes: ^0.2.0
   nextjs-progressbar: ^0.0.14
   react: 18.2.0
   react-dom: 18.2.0
@@ -37,7 +36,6 @@ dependencies:
   jotai: 1.7.2_5wvcx74lvxq2lfpc5x4ihgp2jm
   next: 12.1.6_4cc5zw5azim2bix77d63le72su
   next-i18next: 11.0.0_2nrpme5s5xmpdgccbbbdwhosda
-  next-themes: 0.2.0_2nrpme5s5xmpdgccbbbdwhosda
   nextjs-progressbar: 0.0.14_next@12.1.6+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -4149,18 +4147,6 @@ packages:
     transitivePeerDependencies:
       - react-dom
       - react-native
-    dev: false
-
-  /next-themes/0.2.0_2nrpme5s5xmpdgccbbbdwhosda:
-    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
-    peerDependencies:
-      next: '*'
-      react: '*'
-      react-dom: '*'
-    dependencies:
-      next: 12.1.6_4cc5zw5azim2bix77d63le72su
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/12.1.6_4cc5zw5azim2bix77d63le72su:
