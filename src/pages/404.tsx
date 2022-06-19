@@ -24,7 +24,7 @@ const NotFoundLogo = () => {
 
 const NotFound: NextPage = () => {
   return (
-    <Container>
+    <Container maxW='container.sm'>
       <NotFoundLogo />
     </Container>
   );
