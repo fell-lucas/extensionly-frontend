@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { Container, Link, SimpleGrid, Stack, Text, Flex, Tag, useColorModeValue } from '@chakra-ui/react';
+import { Container, Link, SimpleGrid, Stack, Text, Flex, Tag } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
@@ -31,7 +31,7 @@ const Footer = () => {
             <Link href={'#'}>{t('overview')}</Link>
             <Stack direction={'row'} align={'center'} spacing={2}>
               <Link href={'#'}>{t('features')}</Link>
-              <Tag size={'sm'} bg={useColorModeValue('green.300', 'green.800')} ml={2} color={'white'}>
+              <Tag size={'sm'} bg={'brandGreen'} ml={2} color={'white'}>
                 {c('new')}
               </Tag>
             </Stack>
@@ -73,7 +73,7 @@ const Footer = () => {
         _before={{
           content: '""',
           borderBottom: '1px solid',
-          borderColor: useColorModeValue('gray.200', 'gray.700'),
+          borderColor: 'brandGrayBorder',
           flexGrow: 1,
         }}
       ></Flex>
