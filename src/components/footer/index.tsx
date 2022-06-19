@@ -36,11 +36,17 @@ const Footer = () => {
               </Tag>
             </Stack>
             <Link href={'#'}>{t('tutorials')}</Link>
+            <Link isExternal href={'https://extensionly-analytics.fell.codes/extensionly.vercel.app'}>
+              {t('publicAnalytics')} <ExternalLinkIcon mx='2px' />
+            </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
             <Link as={NextLink} href={'/about'}>
               {t('aboutUs')}
+            </Link>
+            <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
+              {t('openSource')} <ExternalLinkIcon mx='2px' />
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
@@ -71,7 +77,7 @@ const Footer = () => {
           flexGrow: 1,
         }}
       ></Flex>
-      <Text pt={6} fontSize={'sm'} textAlign={'center'}>
+      <Text py={6} fontSize={'sm'} textAlign={'center'}>
         {t('reserved')}
       </Text>
     </>

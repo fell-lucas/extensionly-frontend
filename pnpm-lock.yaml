@@ -7,6 +7,8 @@ specifiers:
   '@chakra-ui/system': ^2.1.3
   '@emotion/react': ^11.9.3
   '@emotion/styled': ^11.9.3
+  '@fontsource/montserrat': ^4.5.11
+  '@nikolovlazar/chakra-ui-prose': ^1.2.1
   '@types/node': 18.0.0
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
@@ -16,6 +18,7 @@ specifiers:
   jotai: ^1.7.2
   next: 12.1.6
   next-i18next: ^11.0.0
+  nextjs-progressbar: ^0.0.14
   react: 18.2.0
   react-dom: 18.2.0
   typescript: 4.7.3
@@ -27,10 +30,13 @@ dependencies:
   '@chakra-ui/system': 2.1.3_fdnqutfacy7v3gmlcm66flps3q
   '@emotion/react': 11.9.3_7eu627umq2cbnjxmysy5yb5jqq
   '@emotion/styled': 11.9.3_qbwmrvb6ojitbfrbjtglmejmbm
+  '@fontsource/montserrat': 4.5.11
+  '@nikolovlazar/chakra-ui-prose': 1.2.1_fgplusbovtccrnpijtl22hmmzm
   framer-motion: 6.3.11_biqbaboplfbrettd7655fr4n2y
   jotai: 1.7.2_5wvcx74lvxq2lfpc5x4ihgp2jm
   next: 12.1.6_4cc5zw5azim2bix77d63le72su
   next-i18next: 11.0.0_2nrpme5s5xmpdgccbbbdwhosda
+  nextjs-progressbar: 0.0.14_next@12.1.6+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -1200,6 +1206,10 @@ packages:
       - supports-color
     dev: true
 
+  /@fontsource/montserrat/4.5.11:
+    resolution: {integrity: sha512-XAYZmprnZDVSLIeEiB3evVG2JD+yoR9aT+I6LCOcwZFQ6ro9UPpopDncqoqwv+j5M0/UjyAP6ov70+L/fmP8Gg==}
+    dev: false
+
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
     engines: {node: '>=10.10.0'}
@@ -1351,6 +1361,18 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@nikolovlazar/chakra-ui-prose/1.2.1_fgplusbovtccrnpijtl22hmmzm:
+    resolution: {integrity: sha512-I8EZiKDGkOnzBOkPquLWir1gvHoKpo7x23O+VusK2WhPcWtgR7p56On+e/QPMCitMbV4xW997ecivCohOxGk9Q==}
+    peerDependencies:
+      '@chakra-ui/react': '>=1.8.6'
+      '@chakra-ui/system': '>=1.11.2'
+      react: '>=17.0.2'
+    dependencies:
+      '@chakra-ui/react': 2.2.1_dersw4eko4axp24m2cfli7j6ja
+      '@chakra-ui/system': 2.1.3_fdnqutfacy7v3gmlcm66flps3q
+      react: 18.2.0
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2825,8 +2847,24 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
 
+  /nextjs-progressbar/0.0.14_next@12.1.6+react@18.2.0:
+    resolution: {integrity: sha512-AXYXHDN6M52AwFnGqH/vlwyo0gbC9zM7QS/4ryOTI0RUqfze5FJl8uSrxKJMzK6hGFdDeQXcZoWsLGXeCVtTwg==}
+    peerDependencies:
+      next: '>= 6.0.0'
+      react: '>= 16.0.0'
+    dependencies:
+      next: 12.1.6_4cc5zw5azim2bix77d63le72su
+      nprogress: 0.2.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
   /node-releases/2.0.5:
     resolution: {integrity: sha512-U9h1NLROZTq9uE1SNffn6WuPDg8icmi3ns4rEl/oTfIle4iLjTliCzgTsbaIFMq/Xn078/lfY/BL0GWZ+psK4Q==}
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
