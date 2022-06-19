@@ -44,7 +44,7 @@ const Footer = () => {
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Legal</ListHeader>
+            <ListHeader>{t('legal')}</ListHeader>
             <Link href={'#'}>{t('cookiesPolicy')}</Link>
             <Link href={'#'}>{t('privacyPolicy')}</Link>
             <Link href={'#'}>{t('serviceTerms')}</Link>
