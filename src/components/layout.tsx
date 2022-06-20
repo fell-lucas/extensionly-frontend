@@ -11,8 +11,8 @@ export const Layout = ({ children }: PropsWithChildren<unknown>) => {
     <ThemeProvider>
       <Script
         defer
-        data-domain='extensionly.vercel.app'
-        src='https://extensionly-analytics.fell.codes/js/plausible.js'
+        data-domain='extensionly.app'
+        src='https://plausible.extensionly.app/js/plausible.js'
       ></Script>
       <Head>
         <title>Extensionly</title>
