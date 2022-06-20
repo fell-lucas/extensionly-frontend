@@ -36,7 +36,7 @@ const Footer = () => {
               </Tag>
             </Stack>
             <Link href={'#'}>{t('tutorials')}</Link>
-            <Link isExternal href={'https://extensionly-analytics.fell.codes/extensionly.vercel.app'}>
+            <Link isExternal href={'https://plausible.extensionly.app/extensionly.app'}>
               {t('publicAnalytics')} <ExternalLinkIcon mx='2px' />
             </Link>
           </Stack>
