@@ -26,7 +26,7 @@ const SocialProfileWithImageHorizontal = ({ imageUrl, name, social, description,
     <Center py={6}>
       <Stack
         borderRadius='lg'
-        w={{ sm: 'sm', md: 'xl' }}
+        w={{ sm: '18rem', md: 'xl' }}
         direction={{ base: 'column', md: 'row' }}
         bg='brandHighlightBg'
         boxShadow={'lg'}
@@ -39,8 +39,7 @@ const SocialProfileWithImageHorizontal = ({ imageUrl, name, social, description,
             borderBottomLeftRadius={{ sm: 'none', md: 'lg' }}
             borderWidth='1px'
             alt='Contributor picture'
-            objectFit='cover'
-            boxSize='sm'
+            boxSize='18rem'
             src={imageUrl}
           />
         </Flex>
