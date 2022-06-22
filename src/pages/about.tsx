@@ -27,7 +27,7 @@ const About: NextPage = () => {
           </p>
         </Prose>
       </Container>
-      <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 2fr)' }} gap={6}>
+      <Grid templateColumns={{ md: 'repeat(1, 1fr)', lg: 'repeat(2, 2fr)' }} gap={6}>
         <GridItem>
           <SocialProfileWithImageHorizontal
             imageUrl='https://avatars.githubusercontent.com/u/47724710?v=4'
@@ -41,9 +41,9 @@ const About: NextPage = () => {
           <SocialProfileWithImageHorizontal
             imageUrl='https://avatars.githubusercontent.com/u/9628068?v=4'
             name='Igor Dalepiane'
-            tags={[]}
+            tags={[t('microservices'), t('programming'), 'gaming', 'netflix']}
             social={'igordalepiane'}
-            description={''}
+            description={t('descriptionIgor')}
           />
         </GridItem>
       </Grid>
