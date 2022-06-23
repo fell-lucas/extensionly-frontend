@@ -34,6 +34,7 @@ const Navbar = () => {
         borderStyle={'solid'}
         borderColor={'brandGrayBorder'}
         align={'center'}
+        color={'gray.500'}
       >
         <Flex flex={{ base: 1, md: 'auto' }} ml={{ base: -2 }} display={{ base: 'flex', md: 'none' }}>
           {/* <IconButton
@@ -68,11 +69,11 @@ const Navbar = () => {
             display={{ base: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
-            color={'white'}
+            colorScheme={'teal'}
             bg={'teal.400'}
             href={'#'}
             _hover={{
-              bg: 'teal.300',
+              bg: 'teal.500',
               transform: 'translateY(-2px)',
               boxShadow: 'lg',
             }}
