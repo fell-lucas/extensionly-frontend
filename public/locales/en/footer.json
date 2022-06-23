@@ -1,16 +1,16 @@
 {
   "company": "Company",
-  "cookiesPolicy": "Cookies Policy",
+  "cookies-policy": "Cookies Policy",
   "features": "Features",
-  "followUs": "Follow Us",
+  "follow-us": "Follow Us",
   "language": "Language",
   "legal": "Legal",
-  "openSource": "Open source",
+  "open-source": "Open source",
   "overview": "Overview",
-  "privacyPolicy": "Privacy Policy",
+  "privacy-policy": "Privacy Policy",
   "product": "Product",
-  "publicAnalytics": "Public Analytics",
+  "public-analytics": "Public Analytics",
   "reserved": "© 2022-PRESENT The Extensionly contributors. All rights reserved",
-  "serviceTerms": "Terms of Use",
+  "service-terms": "Terms of Use",
   "tutorials": "Tutorials"
 }

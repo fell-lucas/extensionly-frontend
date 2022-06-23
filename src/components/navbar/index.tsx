@@ -61,7 +61,7 @@ const Navbar = () => {
 
         <Stack flex={{ base: 1, md: 0 }} justify={'flex-start'} direction={'row'} spacing={6}>
           <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            {t('signIn')}
+            {t('sign-in')}
           </Button>
           <Button
             as={'a'}
@@ -77,7 +77,7 @@ const Navbar = () => {
               boxShadow: 'lg',
             }}
           >
-            {t('signUp')}
+            {t('sign-up')}
           </Button>
           <ThemeSwitch />
         </Stack>
