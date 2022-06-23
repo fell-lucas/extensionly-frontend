@@ -1,20 +1,10 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import {
-  Badge,
-  Center,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Stack,
-  Text,
-  useColorModeValue,
-  Wrap,
-  WrapItem,
-} from '@chakra-ui/react';
+import { Badge, Center, Flex, Heading, Image, Link, Stack, Text, Wrap, WrapItem } from '@chakra-ui/react';
+import { StaticImageData } from 'next/image';
+import SocialImage from '~/src/components/nextImage';
 
 interface Props {
-  imageUrl: string;
+  imageUrl: StaticImageData;
   name: string;
   social: string;
   description: string;
@@ -32,7 +22,7 @@ const SocialProfileWithImageHorizontal = ({ imageUrl, name, social, description,
         boxShadow={'lg'}
       >
         <Flex flex={1}>
-          <Image
+          <SocialImage
             borderLeftRadius='lg'
             borderRightRadius={{ sm: 'lg', md: 'none' }}
             borderBottomRightRadius={{ sm: 'none', md: 'none' }}
@@ -47,9 +37,15 @@ const SocialProfileWithImageHorizontal = ({ imageUrl, name, social, description,
           <Heading size={'sm'} as='h3'>
             {name}
           </Heading>
-          <Link isExternal href={`https://github.com/${social}`} fontWeight={600} color={'gray.500'} size='sm'>
-            @{social} <ExternalLinkIcon mx='1' />
-          </Link>
+          {social.includes('@') ? (
+            <Link fontWeight={600} href={`mailto:${social}`} color={'gray.500'} size='sm'>
+              {social}
+            </Link>
+          ) : (
+            <Link isExternal href={`https://github.com/${social}`} fontWeight={600} color={'gray.500'} size='sm'>
+              @{social} <ExternalLinkIcon mx='1' />
+            </Link>
+          )}
           <Text textAlign={'center'} color={'text'} px={3} py={6}>
             {description}
           </Text>
