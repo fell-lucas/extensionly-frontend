@@ -34,7 +34,6 @@ const Navbar = () => {
         borderStyle={'solid'}
         borderColor={'brandGrayBorder'}
         align={'center'}
-        color={'gray.500'}
       >
         <Flex flex={{ base: 1, md: 'auto' }} ml={{ base: -2 }} display={{ base: 'flex', md: 'none' }}>
           {/* <IconButton
@@ -61,19 +60,18 @@ const Navbar = () => {
         </Flex>
 
         <Stack flex={{ base: 1, md: 0 }} justify={'flex-start'} direction={'row'} spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            {t('sign-in')}
-          </Button>
+          <NextLink href={'/signin'}>
+            <Button as={'a'} cursor='pointer' fontSize={'sm'} fontWeight={400} variant={'link'}>
+              {t('sign-in')}
+            </Button>
+          </NextLink>
           <Button
             as={'a'}
-            display={{ base: 'inline-flex' }}
             fontSize={'sm'}
-            fontWeight={600}
             colorScheme={'teal'}
-            bg={'teal.400'}
-            href={'#'}
+            href={'signup'}
             _hover={{
-              bg: 'teal.500',
+              bg: useColorModeValue('teal.600', 'teal.300'),
               transform: 'translateY(-2px)',
               boxShadow: 'lg',
             }}

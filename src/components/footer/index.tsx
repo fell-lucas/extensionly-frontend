@@ -42,9 +42,9 @@ const Footer = () => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
-            <NextLink href={'/about'}>
-              <Link>{c('about-us')}</Link>
-            </NextLink>
+            <Link as={NextLink} href={'/about'}>
+              {c('about-us')}
+            </Link>
             <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
               {t('open-source')} <ExternalLinkIcon mx='2px' />
             </Link>

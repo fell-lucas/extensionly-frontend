@@ -1,17 +1,5 @@
 import { CheckIcon } from '@chakra-ui/icons';
-import {
-  Container,
-  Stack,
-  Heading,
-  Button,
-  Text,
-  Box,
-  HStack,
-  Icon,
-  SimpleGrid,
-  VStack,
-  useColorMode,
-} from '@chakra-ui/react';
+import { Container, Stack, Heading, Button, Text, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -35,7 +23,7 @@ const Home: NextPage = () => {
       <Stack textAlign={'center'} align={'center'} spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
         <Heading fontWeight={600} fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }} lineHeight={'110%'}>
           {t('title-1')}{' '}
-          <Text as={'span'} color={'teal.400'}>
+          <Text as={'span'} color={useColorModeValue('teal.500', 'teal.200')}>
             {t('title-2')}
           </Text>
         </Heading>
@@ -43,7 +31,7 @@ const Home: NextPage = () => {
           {t('subtitle')}
         </Text>
         <Stack spacing={6} direction={'row'}>
-          <Button rounded={'full'} px={6} colorScheme={'teal'} bg={'teal.400'} _hover={{ bg: 'teal.500' }}>
+          <Button rounded={'full'} px={6} colorScheme={'teal'}>
             {t('get-started')}
           </Button>
           <Button rounded={'full'} px={6}>
