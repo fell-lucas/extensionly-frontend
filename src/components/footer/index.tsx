@@ -14,8 +14,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 const Footer = () => {
-  const { t } = useTranslation('footer');
-  const { t: c } = useTranslation('common');
+  const { t } = useTranslation('common');
   const router = useRouter();
 
   const toggleLocale = (locale: 'pt-BR' | 'en') => {
@@ -32,7 +31,7 @@ const Footer = () => {
             <Stack direction={'row'} align={'center'} spacing={2}>
               <Link href={'#'}>{t('features')}</Link>
               <Tag size={'sm'} bg={'brandGreen'} ml={2} color={'white'}>
-                {c('new')}
+                {t('new')}
               </Tag>
             </Stack>
             <Link href={'#'}>{t('tutorials')}</Link>
@@ -43,7 +42,7 @@ const Footer = () => {
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
             <Link as={NextLink} href={'/about'}>
-              {c('about-us')}
+              {t('about-us')}
             </Link>
             <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
               {t('open-source')} <ExternalLinkIcon mx='2px' />

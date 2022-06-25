@@ -22,7 +22,7 @@ import NextLink from 'next/link';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const { t } = useTranslation('navbar');
+  const { t } = useTranslation('common');
 
   return (
     <Box>

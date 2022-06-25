@@ -1,5 +1,23 @@
 {
   "a": "A",
   "about-us": "Sobre nós",
-  "new": "Novo"
+  "email-address": "Endereço de email",
+  "new": "Novo",
+  "password": "Senha",
+  "sign-in": "Entrar",
+  "sign-up": "Cadastrar",
+  "company": "Empresa",
+  "cookies-policy": "Política de Cookies",
+  "features": "Recursos",
+  "follow-us": "Siga-nos",
+  "language": "Idioma",
+  "legal": "Jurídico",
+  "open-source": "Código aberto",
+  "overview": "Visão geral",
+  "privacy-policy": "Política de Privacidade",
+  "product": "Produto",
+  "public-analytics": "Estatísticas Públicas",
+  "reserved": "© 2022-PRESENTE Os contribuidores da Extensionly. Todos os direitos reservados",
+  "service-terms": "Termos e Condições",
+  "tutorials": "Tutoriais"
 }
