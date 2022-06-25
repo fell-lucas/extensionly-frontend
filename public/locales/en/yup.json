@@ -1,0 +1,16 @@
+{
+  "number-min_one": "Must have at least {{count}} character",
+  "number-min_other": "Must have at least {{count}} characters",
+  "number-max_one": "Must have less than {{count}} character",
+  "number-max_other": "Must have less than {{count}} characters",
+  "password-min-lowercase_one": "Must contain at least {{count}} lowercase letter",
+  "password-min-lowercase_other": "Must contain at least {{count}} lowercase letters",
+  "password-min-uppercase_one": "Must contain at least {{count}} uppercase letter",
+  "password-min-uppercase_other": "Must contain at least {{count}} uppercase letters",
+  "password-min-numbers_one": "Must contain at least {{count}} number",
+  "password-min-numbers_other": "Must contain at least {{count}} numbers",
+  "password-min-symbols_one": "Must contain at least {{count}} special character",
+  "password-min-symbols_other": "Must contain at least {{count}} special characters",
+  "email": "Invalid email",
+  "required": "Required field"
+}
