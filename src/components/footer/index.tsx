@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <>
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      <Container as={Stack} maxW={'7xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 3, md: 5 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>{t('product')}</ListHeader>
@@ -51,9 +51,19 @@ const Footer = () => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('legal')}</ListHeader>
-            <Link href={'#'}>{t('cookies-policy')}</Link>
-            <Link href={'#'}>{t('privacy-policy')}</Link>
-            <Link href={'#'}>{t('service-terms')}</Link>
+            <Link isExternal href={'https://www.privacypolicies.com/live/bc7abf6f-0dda-4fdd-b771-990d343fc3a0'}>
+              {t('cookies-policy')} <ExternalLinkIcon mx='2px' />
+            </Link>
+            <Link isExternal href={'https://www.privacypolicies.com/live/4a9e0e1b-9515-4987-8b7a-de0316c0b09a'}>
+              {t('privacy-policy')}
+              <ExternalLinkIcon mx='2px' />
+            </Link>
+            <Link
+              isExternal
+              href={'https://www.termsandconditionsgenerator.com/live.php?token=Ob89qlaVSUUa8FhUBBCsJ5uYczADSFKG'}
+            >
+              {t('service-terms')} <ExternalLinkIcon mx='2px' />
+            </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('follow-us')}</ListHeader>
