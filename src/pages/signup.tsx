@@ -86,7 +86,7 @@ const SignUp: NextPage = () => {
                   <FormLabel>{c('phone')}</FormLabel>
                   <InputGroup>
                     <InputLeftAddon>+55</InputLeftAddon>
-                    <Field as={Input} name='phone' type='tel' />
+                    <Field as={Input} name='phone' type='tel' placeholder='54999998888' />
                   </InputGroup>
                   <FormErrorMessage>{formik.errors.phone}</FormErrorMessage>
                 </FormControl>
