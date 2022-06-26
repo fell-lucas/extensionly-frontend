@@ -61,23 +61,32 @@ const Navbar = () => {
 
         <Stack flex={{ base: 1, md: 0 }} justify={'flex-start'} direction={'row'} spacing={6}>
           <NextLink href={'/signin'}>
-            <Button as={'a'} cursor='pointer' fontSize={'sm'} fontWeight={400} variant={'link'}>
+            <Button
+              as={'a'}
+              cursor='pointer'
+              fontSize={'sm'}
+              color={useColorModeValue('teal.500', 'teal.100')}
+              fontWeight={400}
+              variant={'link'}
+            >
               {t('sign-in')}
             </Button>
           </NextLink>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            colorScheme={'teal'}
-            href={'signup'}
-            _hover={{
-              bg: useColorModeValue('teal.600', 'teal.300'),
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg',
-            }}
-          >
-            {t('sign-up')}
-          </Button>
+          <NextLink href={'/signup'}>
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              colorScheme={'teal'}
+              cursor='pointer'
+              _hover={{
+                bg: useColorModeValue('teal.600', 'teal.300'),
+                transform: 'translateY(-2px)',
+                boxShadow: 'lg',
+              }}
+            >
+              {t('sign-up')}
+            </Button>
+          </NextLink>
           <ThemeSwitch />
         </Stack>
       </Flex>

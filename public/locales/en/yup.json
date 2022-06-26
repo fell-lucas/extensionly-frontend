@@ -12,5 +12,7 @@
   "password-min-symbols_one": "Must contain at least {{count}} special character",
   "password-min-symbols_other": "Must contain at least {{count}} special characters",
   "email": "Invalid email",
-  "required": "Required field"
+  "required": "Required field",
+  "passwords-match": "Passwords must match",
+  "phone": "Must be a valid brazilian phone number"
 }

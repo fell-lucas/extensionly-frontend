@@ -12,5 +12,7 @@
   "password-min-symbols_one": "Deve conter pelo menos {{count}} caracter especial",
   "password-min-symbols_other": "Deve conter pelo menos {{count}} caracteres especiais",
   "email": "Email inválido",
-  "required": "Campo obrigatório"
+  "required": "Campo obrigatório",
+  "passwords-match": "As senhas devem ser iguais",
+  "phone": "Deve ser um número de telefone brasileiro válido"
 }
