@@ -5,6 +5,9 @@ import type { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import SocialProfileWithImageHorizontal from '../components/about/social';
+import igorPic from '~/assets/igor.jpg';
+import lucasPic from '~/assets/lucas.jpg';
+import bernardinoPic from '~/assets/bernardino.jpg';
 
 const About: NextPage = () => {
   const { t: c } = useTranslation('common');
@@ -14,7 +17,7 @@ const About: NextPage = () => {
     <>
       <Container w='full' maxW='container.md'>
         <Prose>
-          <h2>{c('aboutUs')}</h2>
+          <h2>{c('about-us')}</h2>
           <h4>{c('a')} Extensionly</h4>
           <p>{t('p1')}</p>
           <h4>{t('whoarewe')}</h4>
@@ -27,23 +30,32 @@ const About: NextPage = () => {
           </p>
         </Prose>
       </Container>
-      <Grid templateColumns={{ md: 'repeat(1, 1fr)', lg: 'repeat(2, 2fr)' }} gap={6}>
+      <Grid templateColumns='repeat(1, 1fr)'>
         <GridItem>
           <SocialProfileWithImageHorizontal
-            imageUrl='https://avatars.githubusercontent.com/u/47724710?v=4'
+            imageUrl={lucasPic}
             name='Lucas Fell'
             tags={[t('programming'), t('reading'), t('yerbamate'), 'jazz', 'star wars']}
             social={'fell-lucas'}
-            description={t('descriptionLucas')}
+            description={t('description-lucas')}
           />
         </GridItem>
         <GridItem>
           <SocialProfileWithImageHorizontal
-            imageUrl='https://avatars.githubusercontent.com/u/9628068?v=4'
+            imageUrl={igorPic}
             name='Igor Dalepiane'
             tags={[t('microservices'), t('programming'), 'gaming', 'netflix']}
             social={'igordalepiane'}
-            description={t('descriptionIgor')}
+            description={t('description-igor')}
+          />
+        </GridItem>
+        <GridItem>
+          <SocialProfileWithImageHorizontal
+            imageUrl={bernardinoPic}
+            name='Maicon Bernardino'
+            tags={[t('teaching'), t('software-engineering'), t('cooking'), t('cats')]}
+            social={'bernardino@unipampa.edu.br'}
+            description={t('description-bernardino')}
           />
         </GridItem>
       </Grid>
@@ -56,7 +68,7 @@ export default About;
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['navbar', 'footer', 'common', 'about'])),
+      ...(await serverSideTranslations(locale, ['common', 'about'])),
     },
   };
 }

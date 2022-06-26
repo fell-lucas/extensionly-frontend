@@ -1,5 +1,25 @@
 {
   "a": "The",
-  "aboutUs": "About us",
-  "new": "New"
+  "about-us": "About us",
+  "company": "Company",
+  "cookies-policy": "Cookies Policy",
+  "email-address": "Email address",
+  "features": "Features",
+  "follow-us": "Follow Us",
+  "language": "Language",
+  "legal": "Legal",
+  "name": "Name",
+  "new": "New",
+  "open-source": "Open source",
+  "overview": "Overview",
+  "password": "Password",
+  "phone": "Phone",
+  "privacy-policy": "Privacy Policy",
+  "product": "Product",
+  "public-analytics": "Public Analytics",
+  "reserved": "© 2022-PRESENT The Extensionly contributors. All rights reserved",
+  "service-terms": "Terms and Conditions",
+  "sign-in": "Sign in",
+  "sign-up": "Sign up",
+  "tutorials": "Tutorials"
 }

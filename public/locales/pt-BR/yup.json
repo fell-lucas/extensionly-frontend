@@ -1,0 +1,18 @@
+{
+  "number-min_one": "Deve conter pelo menos {{count}} caracter",
+  "number-min_other": "Deve conter pelo menos {{count}} caracteres",
+  "number-max_one": "Deve conter no máximo {{count}} caracter",
+  "number-max_other": "Deve conter no máximo {{count}} caracteres",
+  "password-min-lowercase_one": "Deve conter pelo menos {{count}} letra minúscula",
+  "password-min-lowercase_other": "Deve conter pelo menos {{count}} letras minúsculas",
+  "password-min-uppercase_one": "Deve conter pelo menos {{count}} letra maiúscula",
+  "password-min-uppercase_other": "Deve conter pelo menos {{count}} letras maiúsculas",
+  "password-min-numbers_one": "Deve conter pelo menos {{count}} número",
+  "password-min-numbers_other": "Deve conter pelo menos {{count}} números",
+  "password-min-symbols_one": "Deve conter pelo menos {{count}} caracter especial",
+  "password-min-symbols_other": "Deve conter pelo menos {{count}} caracteres especiais",
+  "email": "Email inválido",
+  "required": "Campo obrigatório",
+  "passwords-match": "As senhas devem ser iguais",
+  "phone": "Deve ser um número de telefone brasileiro válido"
+}

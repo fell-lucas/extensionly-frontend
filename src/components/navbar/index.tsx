@@ -22,7 +22,7 @@ import NextLink from 'next/link';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const { t } = useTranslation('navbar');
+  const { t } = useTranslation('common');
 
   return (
     <Box>
@@ -60,25 +60,33 @@ const Navbar = () => {
         </Flex>
 
         <Stack flex={{ base: 1, md: 0 }} justify={'flex-start'} direction={'row'} spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            {t('signIn')}
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'teal.400'}
-            href={'#'}
-            _hover={{
-              bg: 'teal.300',
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg',
-            }}
-          >
-            {t('signUp')}
-          </Button>
+          <NextLink href={'/signin'}>
+            <Button
+              as={'a'}
+              cursor='pointer'
+              fontSize={'sm'}
+              color={useColorModeValue('teal.500', 'teal.100')}
+              fontWeight={400}
+              variant={'link'}
+            >
+              {t('sign-in')}
+            </Button>
+          </NextLink>
+          <NextLink href={'/signup'}>
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              colorScheme={'teal'}
+              cursor='pointer'
+              _hover={{
+                bg: useColorModeValue('teal.600', 'teal.300'),
+                transform: 'translateY(-2px)',
+                boxShadow: 'lg',
+              }}
+            >
+              {t('sign-up')}
+            </Button>
+          </NextLink>
           <ThemeSwitch />
         </Stack>
       </Flex>

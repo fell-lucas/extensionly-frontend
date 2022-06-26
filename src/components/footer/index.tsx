@@ -14,8 +14,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 const Footer = () => {
-  const { t } = useTranslation('footer');
-  const { t: c } = useTranslation('common');
+  const { t } = useTranslation('common');
   const router = useRouter();
 
   const toggleLocale = (locale: 'pt-BR' | 'en') => {
@@ -24,7 +23,7 @@ const Footer = () => {
 
   return (
     <>
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      <Container as={Stack} maxW={'7xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 3, md: 5 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>{t('product')}</ListHeader>
@@ -32,31 +31,41 @@ const Footer = () => {
             <Stack direction={'row'} align={'center'} spacing={2}>
               <Link href={'#'}>{t('features')}</Link>
               <Tag size={'sm'} bg={'brandGreen'} ml={2} color={'white'}>
-                {c('new')}
+                {t('new')}
               </Tag>
             </Stack>
             <Link href={'#'}>{t('tutorials')}</Link>
             <Link isExternal href={'https://plausible.extensionly.app/extensionly.app'}>
-              {t('publicAnalytics')} <ExternalLinkIcon mx='2px' />
+              {t('public-analytics')} <ExternalLinkIcon mx='2px' />
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('company')}</ListHeader>
-            <NextLink href={'/about'}>
-              <Link>{c('aboutUs')}</Link>
-            </NextLink>
+            <Link as={NextLink} href={'/about'}>
+              {t('about-us')}
+            </Link>
             <Link isExternal href={'https://github.com/Dalepfell/extensionly-frontend'}>
-              {t('openSource')} <ExternalLinkIcon mx='2px' />
+              {t('open-source')} <ExternalLinkIcon mx='2px' />
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>{t('legal')}</ListHeader>
-            <Link href={'#'}>{t('cookiesPolicy')}</Link>
-            <Link href={'#'}>{t('privacyPolicy')}</Link>
-            <Link href={'#'}>{t('serviceTerms')}</Link>
+            <Link isExternal href={'https://www.privacypolicies.com/live/bc7abf6f-0dda-4fdd-b771-990d343fc3a0'}>
+              {t('cookies-policy')} <ExternalLinkIcon mx='2px' />
+            </Link>
+            <Link isExternal href={'https://www.privacypolicies.com/live/4a9e0e1b-9515-4987-8b7a-de0316c0b09a'}>
+              {t('privacy-policy')}
+              <ExternalLinkIcon mx='2px' />
+            </Link>
+            <Link
+              isExternal
+              href={'https://www.termsandconditionsgenerator.com/live.php?token=Ob89qlaVSUUa8FhUBBCsJ5uYczADSFKG'}
+            >
+              {t('service-terms')} <ExternalLinkIcon mx='2px' />
+            </Link>
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>{t('followUs')}</ListHeader>
+            <ListHeader>{t('follow-us')}</ListHeader>
             <Link isExternal href={'https://github.com/Dalepfell'}>
               GitHub <ExternalLinkIcon mx='2px' />
             </Link>
