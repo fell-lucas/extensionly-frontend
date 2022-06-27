@@ -21,6 +21,7 @@ import YupPassword from 'yup-password';
 import { useTranslation } from 'next-i18next';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import NextLink from 'next/link';
 
 YupPassword(Yup);
 
@@ -87,6 +88,22 @@ const SignIn: NextPage = () => {
                 <Button colorScheme='teal' type='submit'>
                   {c('sign-in')}
                 </Button>
+              </Stack>
+              <Stack pt={6}>
+                <Text align={'center'}>
+                  {t('not-a-user-yet')}{' '}
+                  <NextLink href={'/signup'}>
+                    <Button
+                      as={'a'}
+                      cursor='pointer'
+                      color={useColorModeValue('teal.500', 'teal.100')}
+                      fontWeight={400}
+                      variant={'link'}
+                    >
+                      {c('sign-up')}
+                    </Button>
+                  </NextLink>
+                </Text>
               </Stack>
             </Box>
           </Stack>
