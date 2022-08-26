@@ -24,7 +24,6 @@ specifiers:
   react-dom: 18.2.0
   typescript: 4.7.3
   yup: ^0.32.11
-  yup-password: ^0.2.2
   yup-phone-lite: ^1.1.2
 
 dependencies:
@@ -45,7 +44,6 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   yup: 0.32.11
-  yup-password: 0.2.2
   yup-phone-lite: 1.1.2_yup@0.32.11
 
 devDependencies:
@@ -5256,10 +5254,6 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: false
-
-  /yup-password/0.2.2:
-    resolution: {integrity: sha512-2PHfqGWtbXg4OfDV7VKFIb3hyEaYgTYpEORnFqgGAYqzENWmGzWMoeGvJg2Ohmq6maTRxhJzLZpNTITrqlZTrA==}
     dev: false
 
   /yup-phone-lite/1.1.2_yup@0.32.11:
