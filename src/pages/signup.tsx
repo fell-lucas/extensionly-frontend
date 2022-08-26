@@ -17,12 +17,9 @@ import { Field, FormikProvider, useFormik } from 'formik';
 import { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as Yup from 'yup';
-import YupPassword from 'yup-password';
-import 'yup-phone';
+import 'yup-phone-lite';
 import { useTranslation } from 'next-i18next';
 import NextLink from 'next/link';
-
-YupPassword(Yup);
 
 const SignUp: NextPage = () => {
   const { t: y } = useTranslation('yup');
@@ -32,7 +29,7 @@ const SignUp: NextPage = () => {
   const SigninSchema = Yup.object().shape({
     name: Yup.string().required(y('required')),
     email: Yup.string().email(y('email')).required(y('required')),
-    phone: Yup.string().phone('BR', false, y('phone')).required(y('required')),
+    phone: Yup.string().phone('BR', y('phone')).required(y('required')),
     password: Yup.string()
       .min(8, y('number-min', { count: 8 }))
       .max(250, y('number-max', { count: 250 }))

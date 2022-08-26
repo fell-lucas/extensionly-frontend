@@ -17,13 +17,10 @@ import { Field, FormikProvider, useFormik } from 'formik';
 import { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as Yup from 'yup';
-import YupPassword from 'yup-password';
 import { useTranslation } from 'next-i18next';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import NextLink from 'next/link';
-
-YupPassword(Yup);
 
 const SignIn: NextPage = () => {
   const { t: y } = useTranslation('yup');
